@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - CMCS Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 粒子背景容器 -->
+    <div id="particles-js"></div>
+    
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CMCS Studio</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li>
+                        <div class="theme-switcher">
+                            <button class="theme-btn"><i class="fas fa-palette"></i></button>
+                            <div class="theme-options">
+                                <button data-theme="system">系统默认</button>
+                                <button data-theme="light">浅色主题</button>
+                                <button data-theme="dark">深色主题</button>
+                                <button data-theme="blue">淡蓝色主题</button>
+                                <button data-theme="gray">浅灰色主题</button>
+                                <button data-theme="green">自然绿主题</button>
+                                <button data-theme="purple">优雅紫主题</button>
+                                <button class="custom-theme-btn">自定义主题</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>联系方式</h3>
+                    <ul>
+                        <li>
+                            <strong>电话：</strong>
+                            <p>+86 10 8888 8888</p>
+                        </li>
+                        <li>
+                            <strong>邮箱：</strong>
+                            <p>contact@cmcs-studio.com</p>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <h4>关注我们</h4>
+                        <a href="#" class="social-icon">微信</a>
+                        <a href="#" class="social-icon">微博</a>
+                        <a href="#" class="social-icon">领英</a>
+                    </div>
+                </div>
+                <div class="contact-form" style="position:relative;z-index:10;">
+                    <h3>发送消息</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">主题</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <a href="mailto:ctoyych0@gmail.com?subject=联系CMCS工作室&body=姓名:%0D%0A邮箱:%0D%0A主题:%0D%0A留言:" class="btn">发送邮件</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="contact.html">联系</a></li>
+            </ul>
+            <p>&copy; 2025 CMCS Studio. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/theme.js?v=2"></script>
+    <script>
+        // 主题加载失败处理
+        window.addEventListener('error', function(e) {
+            if (e.filename && e.filename.includes('theme.js')) {
+                console.error('主题加载失败，尝试强制刷新页面');
+                localStorage.removeItem('selectedTheme');
+                location.reload(true);
+            }
+        });
+    </script>
+</body>
+</html>
